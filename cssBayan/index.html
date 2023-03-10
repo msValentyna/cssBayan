@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Bayan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
-        <h1 class="accordion__title">
-            Memes about cats
-        </h1>
+        <h1 class="accordion__title">Memes about cats</h1>
 
         <ul class="accordion">
             <li class="accordion__item">
-                <label for="memgit reset HEAD~e-1" class="accordion__ladel">
+                <label for="meme-1" class="accordion__label">
+                  <input type="checkbox" class="accordion__input" name="meme" id="meme-1">
+                  <span class="accordion-top__wrapper">
                     <span class="accordion-item__title">We love warm too!</span>
-                    <span class="accordion-item__icon"></span>
-                    <img src="image/we-love-warm-too.jpg" alt="Meme: cats love warm" class="accordion-item__image">
+                    <svg class="accordion-item__icon" width="15" height="15">
+                      <use class="accordion-item-icon__plus" href="image/symbol-defs.svg#icon-plus"></use>
+                      <use class="accordion-item-icon__cross" href="image/symbol-defs.svg#icon-cross"></use>
+                    </svg>
+                  </span>
+                  <img src="image/we-love-warm-too.jpg" alt="Meme: cats love warm" class="accordion-item__image">
                 </label>
-                <input type="checkbox" class="accordion__input" name="meme" id="meme-1">
+                
             </li>
         </ul>
     </div>
