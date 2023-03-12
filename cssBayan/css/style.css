@@ -222,7 +222,7 @@ body {
     opacity: 0;
     transition: opacity .2s ease, fill .2s ease;
   }
-  .accordion__label:hover .accordion-item__icon {
+  .accordion:hover .accordion-item__icon {
     opacity: 1;
     fill: #000;
   }
@@ -230,14 +230,17 @@ body {
     color: rgb(69, 69, 159);
     transition: color .2s ease;
   }
-  .accordion__label:hover .accordion-item__title {
+  .accordion:hover .accordion-item__title {
     color: #000;
   }
 
   .accordion__label:hover .accordion-item__image {
     height: 100%;
     max-width: 80rem;
-    margin-top: 2rem;
     scale: 1;
+  }
+  .accordion__label:hover .accordion-item__icon {
+    transform: rotate(45deg);
+    fill: #000;
   }
 }
