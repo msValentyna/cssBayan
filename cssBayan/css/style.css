@@ -34,7 +34,7 @@
   html {
     font-size: 10px;
   }
-  
+
   input,
   button,
   textarea {
@@ -83,89 +83,161 @@ body {
   /* */
 
 .container {
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 15px;
+  min-width: 32rem;
+  margin: 1 auto;
+  padding: 1.5rem;
 }
+
 .accordion__title {
-    font-weight: 700;
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .accordion {
-
+  margin: 0 auto;
 }
 .accordion__item {
-    border: 1px solid red;
+  border-top: 1px solid rgba(153, 153, 229, 0.2);
 }
 .accordion__label {
-    padding: 10px 30px 10px 10px;
-    display: block;
-    transition: color .2s ease;
-    cursor: pointer;
-}
-.accordion-top__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.accordion__label:hover {
-    color: blue;
-}
-.accordion-item__title {
-    display: block;
-    cursor: pointer;
-}
-.accordion-item__icon {
-    display: block;
-    width: 20px;
-    height: 20px;
-    /* background-color: blue; */
-}
-
-.accordion-item-icon__plus {
-  display: none;
-}
-.accordion-item-icon__cross {
-  display: none;
-}
-.accordion__label:hover .accordion-item-icon__plus {
+  padding: 1rem .5rem 1rem .5rem;
   display: block;
+  transition: color .2s ease;
 }
-
-
-
-
-/* .accordion-item__image {
-    display: none;
-    /* display: block;
-    width: 80vw;
-    margin: 0 auto; 
-} */
-
-.accordion-item__image {
-    display: none;
-    max-width: 800px;
-    margin-top: 4rem;
-}
-
 .accordion__input {
   display: block;
-  /* visibility: hidden;
+  appearance: none;  
   width: 0;
-  height: 0; */
-    appearance: none;
-    width: 0;
-    height: 0;
+  height: 0;
+}
+.accordion-top__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-item__title {
+  font-size: 1.6rem;
+  color: rgb(69, 69, 159);
+  transition: color .2s ease;
+}
+.accordion-item__title:active {
+  color: #000;
+  transition: color .2s ease;
+}
+.accordion-item__icon {
+  fill: rgb(69, 69, 159);
+  /* width: 20px;
+  height: 20px; */
+  transition: fill 2s ease;
+  transition: rotate 2s ease;
+}
+
+/* .accordion-item__icon:active {
+  fill: #000;
+  transition: color 2s ease;
+} */
+
+.accordion-item-icon__plus {
+  
+}
+.accordion-top__wrapper .accordion-item__icon {
+  
+}
+.accordion__input:checked ~ .accordion-top__wrapper .accordion-item__title {
+  color: #000;
+}
+.accordion__input:checked ~ .accordion-top__wrapper .accordion-item__icon {
+  transform: rotate(45deg);
+  fill: #000;
 
 }
-.accordion__input:checked ~ .accordion-item__image {
-    display: block;
-}
 
-.accordion__input:checked ~ .accordion-top__wrapper .accordion-item__icon .accordion-item-icon__cross {
+
+.accordion-item__image {
   display: block;
+  margin: 0 auto;
+  width: 80vw;
+  height: 0;
+  scale: .8;
+  transition: scale 1s ease;
 }
-.accordion__input:checked ~ .accordion-top__wrapper .accordion-item__icon .accordion-item-icon__plus {
-  display: none;
+
+.accordion__input:checked ~ .accordion-item__image {
+  height: 100%;
+  max-width: 80rem;
+  margin-top: 2rem;
+  scale: 1;
+}
+
+
+
+
+@media (min-width: 820px) {
+  .container {
+    max-width: 70vw;
+    margin: 3rem auto;
+  }
+  .accordion__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .accordion-item__title {
+    font-size: 2rem;
+  }
+  .accordion-item__image {
+    width: 80%;
+  }
+  .accordion__input:checked ~ .accordion-item__image {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    margin: 5rem auto;
+  }
+  .accordion__title {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+  }
+  .accordion__label {
+    padding: 3rem .5rem 3rem .5rem;
+  }
+  .accordion-item__title {
+    font-size: 2.5rem;
+  }
+  .accordion__input:checked ~ .accordion-item__image {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+
+@media (hover:hover) {
+  .accordion__label:hover {
+    cursor: pointer;
+  }
+  .accordion-item__icon {
+    opacity: 0;
+    transition: opacity .2s ease, fill .2s ease;
+  }
+  .accordion__label:hover .accordion-item__icon {
+    opacity: 1;
+    fill: #000;
+  }
+  .accordion-item__title {
+    color: rgb(69, 69, 159);
+    transition: color .2s ease;
+  }
+  .accordion__label:hover .accordion-item__title {
+    color: #000;
+  }
+
+  .accordion__label:hover .accordion-item__image {
+    height: 100%;
+    max-width: 80rem;
+    margin-top: 2rem;
+    scale: 1;
+  }
 }
