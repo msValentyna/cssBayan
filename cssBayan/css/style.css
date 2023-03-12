@@ -78,6 +78,7 @@ body {
     line-height: 1;
     letter-spacing: .2rem;
     color: #000;
+    background-color: rgb(255, 240, 220);
 }
 /* для планшет 20 для пк 26 */
   /* */
@@ -149,7 +150,6 @@ body {
 .accordion__input:checked ~ .accordion-top__wrapper .accordion-item__icon {
   transform: rotate(45deg);
   fill: #000;
-
 }
 
 
@@ -185,7 +185,7 @@ body {
     font-size: 2rem;
   }
   .accordion-item__image {
-    width: 80%;
+    width: 60%;
   }
   .accordion__input:checked ~ .accordion-item__image {
     margin-top: 3rem;
